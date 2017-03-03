@@ -16,6 +16,7 @@ import { StackNavigator } from 'react-navigation';
 import AppTabs from 'AppTabs';
 import AppDrawerComponent from 'AppDrawerComponent';
 import AppFixtureComponent from 'AppFixtureComponent';
+import AppNewsComponent from 'AppNewsComponent';
 
 const AppStack = StackNavigator ({
 
@@ -27,12 +28,19 @@ const AppStack = StackNavigator ({
 
     screen: AppFixtureComponent,
   },
+  AppNewsArticle: {
+
+    screen: AppNewsComponent,
+  },
 }, {
 
   mode: 'modal',
-  cardStack: {
+  navigationOptions: {
+    
+      cardStack: {
 
-    gesturesEnabled: true,
+        gesturesEnabled: true,
+      },
   },
 });
 

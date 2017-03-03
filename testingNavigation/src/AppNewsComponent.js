@@ -1,5 +1,5 @@
 /**
- * @providesModule AppFixtureComponent
+ * @providesModule AppNewsComponent
  */
 
 import React, { Component } from "react";
@@ -16,7 +16,7 @@ import { StackNavigator } from 'react-navigation'
 
 import { connect } from 'react-redux';
 
-class AppFixtureComponent extends Component {
+class AppNewsComponent extends Component {
 
     static navigationOptions = {
 
@@ -41,11 +41,7 @@ class AppFixtureComponent extends Component {
                 <Text>{this.props.selectedFixture.compeitionYear}</Text>
                 <Button
                     onPress={() => this.props.navigation.goBack ()}
-                    title="Go back to Tabs"
-                />
-                <Button
-                    onPress={() => this.props.navigation.navigate ('AppNewsArticle')}
-                    title="Open News Article"
+                    title="Go back"
                 />
             </View>
         );
@@ -60,4 +56,4 @@ const mapStateToProps = state => ({
   selectedFixture: state.appReducer.selectedFixture,
 });
 
-export default connect (mapStateToProps,null)(AppFixtureComponent);
+export default connect (mapStateToProps,null)(AppNewsComponent);
