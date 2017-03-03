@@ -11,7 +11,7 @@ import {
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import appReducers from 'AppDrawerReducer';
-import AppStack from 'AppStack';
+import AppDrawer from 'AppDrawer';
 
 
 const appStore = createStore (appReducers);
@@ -28,7 +28,7 @@ class App extends Component {
 		return (
 
       <Provider store={appStore}>
-			   <AppStack />
+			   <AppDrawer />
       </Provider>
 		);
 	}

@@ -19,17 +19,21 @@ import AppFixtureComponent from 'AppFixtureComponent';
 
 const AppStack = StackNavigator ({
 
-  ScreenOne: {
+  AppTabs: {
 
     screen: AppTabs,
   },
-  ScreenTwo: {
+  AppFixtureDetails: {
 
     screen: AppFixtureComponent,
   },
 }, {
 
   mode: 'modal',
+  cardStack: {
+
+    gesturesEnabled: true,
+  },
 });
 
 export default AppStack;

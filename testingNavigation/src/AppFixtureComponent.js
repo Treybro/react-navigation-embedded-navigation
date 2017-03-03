@@ -40,7 +40,7 @@ class AppFixtureComponent extends Component {
                 <Text>{this.props.selectedFixture.competitionId}</Text>
                 <Text>{this.props.selectedFixture.compeitionYear}</Text>
                 <Button
-                    onPress={() => this.props.navigation.navigate('ScreenOne')}
+                    onPress={() => this.props.navigation.goBack ()}
                     title="Go back to Tabs"
                 />
             </View>
