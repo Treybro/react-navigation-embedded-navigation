@@ -17,6 +17,8 @@ import { TabNavigator } from 'react-navigation'
 import { showFixture } from 'AppActions';
 import { connect } from 'react-redux';
 
+import AppDrawerComponent from 'AppDrawerComponent';
+
 class TabFive extends Component {
 
   static navigationOptions = {
@@ -66,6 +68,7 @@ class TabFive extends Component {
               }}>
                 <Text style={{height: 200}}>Hide modal</Text>
               </TouchableOpacity>
+              <AppDrawerComponent />
             </View>
           </View>
             </Modal>
