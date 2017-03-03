@@ -8,7 +8,13 @@ import {
 	Text,
 } from "react-native";
 
-import AppDrawer from 'AppDrawer';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import appReducers from 'AppDrawerReducer';
+import AppStack from 'AppStack';
+
+
+const appStore = createStore (appReducers);
 
 class App extends Component {
 
@@ -21,7 +27,9 @@ class App extends Component {
 
 		return (
 
-			<AppDrawer />
+      <Provider store={appStore}>
+			   <AppStack />
+      </Provider>
 		);
 	}
 }

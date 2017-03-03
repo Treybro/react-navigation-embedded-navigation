@@ -14,66 +14,8 @@ import {
 import { DrawerNavigator } from 'react-navigation';
 
 import AppTabs from 'AppTabs';
-import AppFixtureStack from 'AppFixtureStack';
-
-class ScreenTwo extends Component {
-
- 	static navigationOptions = {
-
- 	};
-
- 	constructor (props) {
-
- 		super (props);
-
- 		console.log (this.props);
- 	}
-
- 	render () {
-
- 		return (
-
- 			<View>
-	 			<Button
-	 				onPress={() => this.props.navigation.goBack ()}
-	 				title="Go back to Tabs"
-	 			/>
-	 		</View>
- 		);
- 	}
-}
-
-class Drawer extends Component {
-
-	static navigationOptions = {
-
-	};
-
-	render() {
-
-		return (
-
-			<View>
-	 			<TouchableOpacity style={{
-					width: 250, 
-					height: 50,
-					backgroundColor: 'blue'
-				}}
-				onPress={() => this.props.navigation.navigate('ScreenTwo', {info: 'first fixture details'})}>
-	 				<Text>This is a live fixture</Text>
-	 			</TouchableOpacity>
-	 			<TouchableOpacity style={{
-					width: 250, 
-					height: 50,
-					backgroundColor: 'blue'
-				}}
-				onPress={() => this.props.navigation.navigate('ScreenTwo', {info: 'second fixture details'})}>
-	 				<Text>This is another live fixture</Text>
-	 			</TouchableOpacity>
- 			</View>
-		);
-	}
-}
+import AppDrawerComponent from 'AppDrawerComponent';
+import AppFixtureComponent from 'AppFixtureComponent';
 
 const AppDrawer = DrawerNavigator ({
 
@@ -83,12 +25,12 @@ const AppDrawer = DrawerNavigator ({
 	},
 	ScreenTwo: {
 
-		screen: ScreenTwo,
+		screen: AppFixtureComponent,
 	},
 }, {
 
 	drawerPosition: 'left',
-	contentComponent: Drawer,
+	contentComponent: AppDrawerComponent,
 });
 
 export default AppDrawer;
